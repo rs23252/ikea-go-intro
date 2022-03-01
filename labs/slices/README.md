@@ -6,8 +6,8 @@ var i int   // an int called i
 var j []int // a slice of ints called j
 ```
 In this example,
-- i is a variable of type `int`.
-- j is a variable of type `[]int`, that is, a `slice` of `int`.
+- `i` is a variable of type `int`.
+- `j` is a variable of type `[]int`, that is, a `slice` of `int`.
 
 Slices are very important in Go programs
 
@@ -85,3 +85,203 @@ func main() {
   ```
 </details>
 <br>
+
+## Index expressions
+- To access, or assign, the contents of a slice element at index `i`, use the form `s[i]`.
+
+- Slices are zero indexed, so `s[0]` is the 1st element, `s[1]` is the second element, and so on.
+
+- When the index expression appears on the left hand side of the equals operator, =
+
+  `s[7] = 20`
+
+- We are assigning the number 20 to the 8'th element of the slice.
+
+- When the index expression appears on the right hand side of the equals operator, =
+
+  `x := s[7]`
+
+- We are assigning the value at the 8th element of `s` to the variable `x`.
+
+## Slice zero value
+We saw earlier that the zero value of the slice
+
+`var s []int`
+
+was and empty slice, a slice with length of zero.
+
+What is the value of each of the elements of a newly created, with make, slice?
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+  x := make([]int, 5)
+
+  for i := 0; i < len(x); i++ {
+    fmt.Println(x[i])
+  }
+
+}
+```
+
+## Slice initialisation
+We want to create an []int slice of the first 10 prime numbers, how could we do this?
+
+One solution could be to create the slice and assign a value to each element in the slice.
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+  primes := make([]int, 10)
+  primes[0] = 2
+  primes[1] = 3
+  primes[2] = 5
+  primes[3] = 7
+  primes[4] = 11
+  primes[5] = 13
+  primes[6] = 17
+  primes[7] = 19
+  primes[8] = 23
+  primes[9] = 29
+  fmt.Println(primes)
+}
+```
+Doing this manually is verbose and boring; how would you do this for the first 50 primes?
+
+Go supports a method of assignment where we both declare and initalise the slice at once.
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+  
+  primes := []int{2, 3, 5, 7, 11, 13, 17, 19, 23, 29}
+
+  fmt.Println(primes)
+}
+```
+This is called the *composite literal* syntax.
+
+## append
+So far we've been using slices with a known length. You can extend the contents of a slice
+with the built-in append function.
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+  primes := []int{2, 3, 5, 7, 11}
+  fmt.Println(len(primes), primes)
+
+  primes = append(primes, 13)  
+  fmt.Println(len(primes), primes)
+
+  primes = append(primes, 17, 19, 23)
+  fmt.Println(len(primes), primes)
+}
+```
+`append` increases the length of the slice to accommodate the new items, then returns a
+new slice value.
+
+You can `append` multiple values in one statement, providing they are all the same type.
+
+## Further reading
+
+[Arrays, slices (and strings): The mechanics of 'append'](https://go.dev/blog/slices)
+
+## Subslices
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+  brothers := []string{"chico", "harpo", "groucho", "gummo", "zeppo"}
+  fmt.Println(brothers)
+
+  wellknown := brothers[0:3]
+  fmt.Println(wellknown)
+}
+```
+The expression brothers[0:3] evaluates to a slice of the 1st to 3rd Marx brother.
+
+Lab:
+
+```go
+
+package main
+
+import "fmt"
+
+func main() {
+	// These are the primes less than 200
+	primes := []int{2, 3, 5, 7, 11, 13, 17, 19, 23, 29,
+		31, 37, 41, 43, 47, 53, 59, 61, 67, 71,
+		73, 79, 83, 89, 97, 101, 103, 107, 109,
+		113, 127, 131, 137, 139, 149, 151, 157,
+		163, 167, 173, 179, 181, 191, 193, 197, 199}
+	fmt.Println(primes)
+
+	// Write a program to print all the primes less than 10
+	// loop through the slice of primes and test if the value
+	// is less than 10. When you find a value that is 10 or more
+	// slice the list of primes at that point and print it.
+
+	// Bonus: write a program to print only the two digit primes.
+}
+
+```
+
+<details>
+  <summary>Not sure how?</summary>
+
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+	// These are the primes less than 200
+	primes := []int{2, 3, 5, 7, 11, 13, 17, 19, 23, 29,
+		31, 37, 41, 43, 47, 53, 59, 61, 67, 71,
+		73, 79, 83, 89, 97, 101, 103, 107, 109,
+		113, 127, 131, 137, 139, 149, 151, 157,
+		163, 167, 173, 179, 181, 191, 193, 197, 199}
+	fmt.Println(primes)
+
+	for i := 0; i < len(primes); i++ {
+		if primes[i] > 9 {
+			v := primes[0:i]
+			fmt.Println(v)
+			break
+		}
+	}
+
+	// Bonus: write a print only the two digit primes.
+	var i, j int
+	for ; i < len(primes); i++ {
+		if primes[i] > 9 {
+			break
+		}
+	}
+	for j = i; j < len(primes); j++ {
+		if primes[j] > 99 {
+			break
+		}
+	}
+	fmt.Println(primes[i:j])
+}
+```
+</details>
