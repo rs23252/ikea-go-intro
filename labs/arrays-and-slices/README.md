@@ -128,7 +128,7 @@ We saw earlier that the zero value of the slice
 
 `var s []int`
 
-was and empty slice, a slice with length of zero.
+is an empty slice, a slice with length of zero.
 
 What is the value of each of the elements of a newly created, with make, slice?
 
