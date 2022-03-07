@@ -1,8 +1,13 @@
 ## Arrays
 Arrays allow you to store multiple elements of the same type in a variable in a particular order. Arrays in Go have fixed capacity which you define when you declare the variable. We can initialize an array in two ways:
 
-- [N]type{value1, value2, ..., valueN} e.g. numbers := [5]int{1, 2, 3, 4, 5}
-- [...]type{value1, value2, ..., valueN} e.g. numbers := [...]int{1, 2, 3, 4, 5}
+- `[N]type{value1, value2, ..., valueN}` 
+  
+  e.g. `numbers := [5]int{1, 2, 3, 4, 5}`
+
+- `[...]type{value1, value2, ..., valueN}` 
+
+  e.g. `numbers := [...]int{1, 2, 3, 4, 5}`
 
 Array's in Go are not frequently used, their most common purpose in Go is to hold storage for a slice.
 
