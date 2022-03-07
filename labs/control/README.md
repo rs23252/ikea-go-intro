@@ -109,6 +109,8 @@ func main() {
 }
 ```
 
+<br>
+
 **Lab:**
 
 1. Write a function called `hello` that receives a name and prints hello, <name>
