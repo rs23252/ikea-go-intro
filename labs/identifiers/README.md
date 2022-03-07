@@ -34,12 +34,14 @@ A variable holds a value that can be changed over time. You declare a new variab
 
 Just like constants, variable identifiers can be any any valid Unicode word.
 
-## Unused variable declarations
+## Unused variable declarations | Blank identifier
 Unused variables are often the source of bugs. If you declare a variable in the scope of
 your function but do not use it, the Go compiler will complain.
 
 If the variable is unused, you should delete it, or assign it temporarily to the magic variable
 called `_`
+
+`_` in Go is also referred as [blank identifier](https://go.dev/doc/effective_go#blank). The blank identifier can be assigned or declared with any value of any type, with the value discarded harmlessly.
 
 ```go
 package main
@@ -55,6 +57,11 @@ func main() {
 
   //fmt.Println(pi)
   //fmt.Println(totalAlpha)
+
+  //The value of pi and totalAlpha can also be assigned to _
+  //_ = pi
+  //_ = totalAplha
+
 }
 
 ```
