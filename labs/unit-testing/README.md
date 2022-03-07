@@ -31,3 +31,15 @@ func greeting() string {
   return "Hello"
 }
 ```
+
+## Test coverage
+`go test` can report coverage
+
+```shell
+go test -coverprofile=cover.out
+```
+
+This produces a coverage file, `cover.out`:
+
+- `go tool cover -func=cover.out` will print the coverage report
+- `go tool cover -html=cover.out` will open the report in a browser
