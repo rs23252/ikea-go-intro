@@ -79,3 +79,16 @@ For e.g. the module can be named as:
 ```shell
 go mod init github.com/the-code-camp/ikea-go-intro
 ```
+
+## External dependencies
+
+When your code uses external packages, those packages (distributed as modules) become dependencies. Using Go modules you can add new dependencies and manage the existing ones. Over time, you may need to upgrade them or replace them. Go provides dependency management tools that help you keep your Go applications secure as you incorporate external dependencies.
+
+To add an external dependency of `gorilla/mux` to your project run the below command:
+
+```shell
+$ go get -u github.com/gorilla/mux
+
+# now check go.mod file
+$ cat go.mod
+```
