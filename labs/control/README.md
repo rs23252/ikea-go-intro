@@ -108,3 +108,20 @@ func main() {
 	}
 }
 ```
+
+**Lab:**
+
+1. Write a function called `hello` that receives a name and prints hello, <name>
+for e.g `Hello("Chris")` prints `Hello, Chris`
+
+2. If the name is passed as empty, it should print "Hello, World", e.g. `Hello("")`
+
+3. Modify the Hello function to receive one more parameter called language `Hello(name string, lang string)` and should support `Spanish` as a language. Program should print:
+    - `Hola, Chris` when `Hello("Chris", "Spanish")`
+    - `Hello, Chris` when `Hello("Chris", "")`
+    - `Hello, World` when `Hello("", "")`
+
+4. Add a new requirement to support one more language as `French`. Program should print:
+    - `Bonjour, Chris` when `Hello("Chris", "French")`.
+    - rest of the requirement will remain same.
+    - modify the program to use `switch` statement instead of using `if`.
