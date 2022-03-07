@@ -1,8 +1,9 @@
 ## Introduction to Go
 📋 Write you first Go program. 
-- create a folder to keep you go program files.
-- open your favourite IDE and point it to the folder you just created.
-- name your file as `main.go`
+- Create a folder named `learning-go` inside your home folder.
+- This folder will be used to keep all the go programs we will create while learning.
+- Open your favourite IDE and point it to the folder you just created.
+- Name your file as `main.go`
 
 ```go
 package main
@@ -18,7 +19,7 @@ func main() {
 open terminal and change your directory to the go source folder you created for storing your files.
 
 ```shell
-#run the below command where you have your first.go file
+#run the below command where you have your main.go file
 go run main.go
 ```
 ## Explore the go cli
