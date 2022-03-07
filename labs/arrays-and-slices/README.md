@@ -1,3 +1,18 @@
+## Arrays
+Arrays allow you to store multiple elements of the same type in a variable in a particular order. Arrays in Go have fixed capacity which you define when you declare the variable. We can initialize an array in two ways:
+
+- [N]type{value1, value2, ..., valueN} e.g. numbers := [5]int{1, 2, 3, 4, 5}
+- [...]type{value1, value2, ..., valueN} e.g. numbers := [...]int{1, 2, 3, 4, 5}
+
+Array's in Go are not frequently used, their most common purpose in Go is to hold storage for a slice.
+
+```go
+	numbers := [5]int{1, 2, 3, 4, 5}
+  for _, v := range numbers {
+    fmt.Println(v)
+  }
+```
+
 ## Slices
 A slice is an ordered collection of values of a single type. The syntax for declaring a slice variable is very similar to declaring a scalar variable.
 
@@ -216,7 +231,7 @@ func main() {
 ```
 The expression brothers[0:3] evaluates to a slice of the 1st to 3rd Marx brother.
 
-Lab:
+**Lab 1:**
 
 ```go
 
@@ -285,3 +300,55 @@ func main() {
 }
 ```
 </details>
+<br>
+
+**Lab 2:**
+
+Assign every lowercase letter a value, from `1` for `a` to `26` for `z`. Given a string of lowercase letters, find the sum of the values of the letters in the string.
+
+```
+sumOfLetters("")          => 0
+sumOfLetters("a")         => 1
+sumOfLetters("z")         => 26
+sumOfLetters("cab")       => 6
+sumOfLetters("excellent") => 100
+```
+
+<details>
+  <summary>Not sure how?</summary>
+
+```go
+
+func main() {
+  // create a slice to keep alphabets from a to z
+  letterValue := make([]string, 0)
+  letterValue = append(letterValue, "")
+  for pos := 'a'; pos <= 'z'; pos++ {
+    char := fmt.Sprintf("%c", pos)
+    letterValue = append(letterValue, char)
+  }
+
+  // find the sum of "cba"
+  letters := "cba"
+
+  // iterating over letters and calling findValue to find the value of alphabet and doing sum
+  sum := 0
+  for _, char := range letters {
+   c := fmt.Sprintf("%c", char)
+   sum = sum + findValue(c, letterValue)
+  }
+  fmt.Println("sum is: ", sum)
+}
+
+// find letter value
+func findValue(char string, letterValue []string) int {
+  for i, v := range letterValue {
+    if char == v {
+      return i
+    }
+  }
+  return 0
+}
+```
+</details>
+<br>
