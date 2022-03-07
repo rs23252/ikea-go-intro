@@ -42,4 +42,8 @@ func main() {
 }
 ```
 
+## String method
+
+Any type that implements a `String() string` method will be used by the `fmt` package
+when it prints the value.
 
