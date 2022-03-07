@@ -46,6 +46,49 @@ One of Go's unusual features is that functions and methods can return multiple v
 func Write(b []byte) (n int, err error)
 ```
 
+## Multiple return values
+Multiple assignment is important to understand because you can return multiple values from a function.
+
+```go
+// This is a function declaration for sum, which takes two arguments, two int, and returns an int.
+func sum(a int, b int) int
+```
+
+```go
+// This is a function declaration for h, which takes two arguments, two ints, and returns three values, two int s and a string.
+func h(i, j int) (int, int, string)
+```
+
+Your program must return the number of values specified in the function signature.
+```go
+package main
+
+import "fmt"
+
+// swap switches the values of a and b
+func swap(a int, b int) (int, int) {
+  return b, a
+}
+
+func main() {
+  a, b := swap(2, 5)
+  fmt.Println(a, b)
+}
+```
+
+When you call a function that returns multiple values, you must assign all of them or none
+of them.
+
+If you want to use only the first value you can ignore the second by assigning it
+to the underscore variable, _.
+
+```go
+func main() {
+  a, _ := swap(2, 5)
+  fmt.Println(a)
+}
+```
+
 ## Named result parameters
 The return or result "parameters" of a Go function can be given names. 
 
