@@ -45,3 +45,12 @@ Edit the program to make it print only the numbers from 6 down to 4.
 
 Note: This for loop only has a condition, there is no init statement or post statement, so we
 can omit the semicolons ;
+
+Printing alphabets from `a` to `z`:
+
+```go
+// Go uses the `ASCII` codes within the `for` loop to print alphabets from `a` to `z`.
+for ch := 'a'; ch <= 'z'; ch++ {
+  fmt.Printf("%c ", ch)
+}
+```
