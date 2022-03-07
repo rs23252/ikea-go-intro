@@ -19,6 +19,25 @@ func main() {
 }
 ```
 
+## Multiple assignment
+
+Go allows you to perform multiple assignments and declarations in one statement.
+
+For example, if we wanted to declare, x, y, and z, with the values 1, 2, and 3 respectively.
+We could write:
+
+```go
+var x = 1
+var y = 2
+var z = 3
+```
+
+We can write the same thing like this:
+
+```go
+var x, y, z = 1, 2, 3
+```
+
 ## Declarations
 There are six kinds of declarations in Go, we've seen most of them already:
 
