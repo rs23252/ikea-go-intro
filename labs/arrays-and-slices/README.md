@@ -11,6 +11,10 @@ Arrays allow you to store multiple elements of the same type in a variable in a 
 
 Array's in Go are not frequently used, their most common purpose in Go is to hold storage for a slice.
 
+## Range
+`range` lets you iterate over an array. On each iteration, range returns two values - the `index` and the `value`. In the below example we are choosing to ignore the index value by using _ [blank identifier](../identifiers##unused-variable-declarations--blank-identifier).
+
+
 ```go
 numbers := [5]int{1, 2, 3, 4, 5}
 for _, v := range numbers {
