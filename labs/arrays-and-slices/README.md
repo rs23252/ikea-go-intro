@@ -12,10 +12,10 @@ Arrays allow you to store multiple elements of the same type in a variable in a 
 Array's in Go are not frequently used, their most common purpose in Go is to hold storage for a slice.
 
 ```go
-	numbers := [5]int{1, 2, 3, 4, 5}
-  for _, v := range numbers {
-    fmt.Println(v)
-  }
+numbers := [5]int{1, 2, 3, 4, 5}
+for _, v := range numbers {
+  fmt.Println(v)
+}
 ```
 
 ## Slices
