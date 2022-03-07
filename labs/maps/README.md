@@ -154,3 +154,47 @@ func main() {
   }
 }
 ```
+
+**Lab :**
+
+Assign every lowercase letter a value, from `1` for `a` to `26` for `z`. Given a string of lowercase letters, find the sum of the values of the letters in the string.
+
+Write the program using maps:
+
+```
+sumOfLetters("")          => 0
+sumOfLetters("a")         => 1
+sumOfLetters("z")         => 26
+sumOfLetters("cab")       => 6
+sumOfLetters("excellent") => 100
+```
+
+<details>
+  <summary>Not sure how?</summary>
+
+```go
+
+func main() {
+  // create a map to keep alphabets from a to z
+  letterValue := map[string]int{}
+  letterValue[""] = 0
+  for j, pos := 1, 'a'; pos <= 'z'; pos++ {
+    char := fmt.Sprintf("%c", pos)
+    letterValue[char] = j
+    j++
+  }
+
+  // find the sum of "cba"
+  letters := "cba"
+
+  // iterating over letters and getting the value of alphabet from map and doing sum
+  sum := 0
+  for _, char := range letters {
+    c := fmt.Sprintf("%c", char)
+    sum = sum + letterValue[c]
+  }
+  fmt.Println("sum is: ", sum)
+}
+```
+</details>
+<br>
