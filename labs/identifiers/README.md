@@ -23,7 +23,7 @@ func main() {
 
 Go allows you to perform multiple assignments and declarations in one statement.
 
-For example, if we wanted to declare, x, y, and z, with the values 1, 2, and 3 respectively.
+📋 For example, if we wanted to declare, x, y, and z, with the values 1, 2, and 3 respectively.
 We could write:
 
 ```go

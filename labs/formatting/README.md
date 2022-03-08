@@ -1,6 +1,8 @@
 ## Formatting
 
-Go provides excellent support for formatting using the `fmt.Printf` function. Here are some examples of common string formatting tasks:
+Go provides excellent support for formatting using the `fmt.Printf` function. 
+
+📋 Here are some examples of common string formatting tasks:
 
 ```go
 p := "New Delhi"
@@ -21,7 +23,7 @@ fmt.Printf("width3: |%-6.2f|%-6.2f|\n", 1.2, 3.45)
 ```
 
 ## Sprintf
-`Sprintf` formats and returns a string without printing it anywhere.
+📋  `Sprintf` formats and returns a string without printing it anywhere.
 
 ```go
 char := 97

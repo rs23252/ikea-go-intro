@@ -6,8 +6,9 @@ var name = "go"
 var counter = 1
 ```
 
-Which both declares and initalises the variables counter and name respectively. What
-happens if we have code like this?
+Which both declares and initalises the variables counter and name respectively. 
+
+📋 What happens if we have code like this?
 
 ```go
 package main

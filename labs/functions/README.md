@@ -5,6 +5,8 @@ You can declare your own functions with the func declaration.
 
 A function's name must be a valid identifier, just like `const` and `var`.
 
+📋 Creating a function `print`:
+
 ```go
 func print(msg string) {
   fmt.Println(msg)
@@ -59,7 +61,7 @@ func sum(a int, b int) int
 func h(i, j int) (int, int, string)
 ```
 
-Your program must return the number of values specified in the function signature.
+📋 Your program must return the number of values specified in the function signature.
 ```go
 package main
 
@@ -100,6 +102,8 @@ func nextInt(b []byte, pos int) (value, nextPos int)
 
 ## Defer
 Go's defer statement schedules a function call (the deferred function) to be run immediately before the function executing the defer returns. It's an unusual but effective way to deal with situations such as resources that must be released regardless of which path a function takes to return. The canonical examples are unlocking a mutex or closing a file. 
+
+📋 Example:
 
 ```go
 func main() {
