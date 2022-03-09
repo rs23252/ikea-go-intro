@@ -47,3 +47,6 @@ func main() {
 Any type that implements a `String() string` method will be used by the `fmt` package
 when it prints the value.
 
+## Lab:
+
+Rebuild the [ToDo project](../project) using structs
