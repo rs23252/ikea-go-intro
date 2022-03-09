@@ -120,7 +120,13 @@ func main() {
 
 <br>
 
-**Lab:**
+**Lab 1:**
+In the last unit test example you have seen the `addContact` function having a chaining of `if-else` for phone number. Convert the `if-else` chaining to `switch`
+
+[Unit test program](../unit-testing#write-unit-test)
+
+
+**Lab 2:**
 
 1. Write a function called `hello` that receives a name and prints hello, <name>
 for e.g `Hello("Chris")` prints `Hello, Chris`
