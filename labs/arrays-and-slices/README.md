@@ -70,7 +70,8 @@ func main() {
 
 In this example, on the first line `var cities []string` declares cities to be a slice of string. On the second line, cities is assigned the result of `make([]string, 20)`.
 
-Lab:
+## Lab:
+
 Let's do a quick exercise to familarise yourself with using slices
 
 ```go
