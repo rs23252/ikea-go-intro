@@ -82,6 +82,7 @@ switch i {
 you can also check conditions:
 
 ```go
+x := 5
 switch {
   case x < 10:
     f1() //calling function f1
@@ -89,6 +90,14 @@ switch {
     f2() //calling function f2
   default:
     println("default called")
+}
+
+func f1() {
+  fmt.Println("f1 called")
+}
+
+func f2() {
+  fmt.Println("f2 called")
 }
 ```
 
