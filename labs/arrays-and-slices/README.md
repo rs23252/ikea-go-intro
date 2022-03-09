@@ -35,9 +35,6 @@ In this example,
 
 Slices are very important in Go programs
 
-Note: A slice is not an array. Go also supports arrays, but you'll see later than they aren't
-very common, or very easy to use, so we won't discuss them at the moment.
-
 ## How large is a slice?
 
 If I declare a slice, `[]string`, how many items can it hold?
