@@ -79,7 +79,7 @@ Write unit tests for below program:
 - last name cannot be blank.
 - phone number cannot blank.
 - phone number length should be more than 10.
-- phone number should not contain only digits.
+- phone number should contain only digits.
 - phone number should start with 0.
 
 When you are done, also check the coverage of your program.
