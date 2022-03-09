@@ -51,7 +51,7 @@ $ go mod init unit-testing-example
 $ go mod tidy
 
 # run tests again
-# go test
+$ go test
 ```
 
 ## Test coverage
