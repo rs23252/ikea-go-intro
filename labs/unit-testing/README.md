@@ -82,6 +82,8 @@ Write unit tests for below program:
 - phone number should not contain only digits.
 - phone number should start with 0.
 
+When you are done, also check the coverage of your program.
+ 
 ```go
 package main
 
