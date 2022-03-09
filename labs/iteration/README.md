@@ -55,7 +55,7 @@ for ch := 'a'; ch <= 'z'; ch++ {
 }
 ```
 
-**Lab:**
+## Lab:
 
 Using loop in Go, print the following structure
 

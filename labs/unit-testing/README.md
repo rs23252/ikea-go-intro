@@ -68,7 +68,7 @@ This produces a coverage file, `cover.out`:
 
 <br>
 
-## Write unit test
+## Lab: Write unit test
 Write unit tests for below program:
 
 `addContact` function add a contact, before adding it validates the input parameters.
@@ -83,7 +83,7 @@ Write unit tests for below program:
 - phone number should start with 0.
 
 When you are done, also check the coverage of your program.
- 
+
 ```go
 package main
 
