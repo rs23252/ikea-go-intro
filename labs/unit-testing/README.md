@@ -32,6 +32,28 @@ func greeting() string {
 }
 ```
 
+To run test:
+```shell
+$ go test
+```
+You might get the modules error depending on your version of go:
+
+```
+go: go.mod file not found in current directory or any parent directory; see 'go help modules'
+```
+
+This can be easily fixed by creating a go module. More on modules later:
+
+```shell
+$ go mod init unit-testing-example
+
+# it might ask you to run the tidy command
+$ go mod tidy
+
+# run tests again
+# go test
+```
+
 ## Test coverage
 `go test` can report coverage
 
