@@ -136,3 +136,5 @@ for e.g `Hello("Chris")` prints `Hello, Chris`
     - `Bonjour, Chris` when `Hello("Chris", "French")`.
     - rest of the requirement will remain same.
     - modify the program to use `switch` statement instead of using `if`.
+
+5. Write unit tests
