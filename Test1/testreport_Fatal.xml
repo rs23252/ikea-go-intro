@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+	<testsuite tests="2" failures="1" time="1.884" name="github.com/rs23252/ikea-go-course">
+		<properties>
+			<property name="go.version" value="go1.17.7"></property>
+		</properties>
+		<testcase classname="ikea-go-course" name="TestPass" time="0.000"></testcase>
+		<testcase classname="ikea-go-course" name="TestFail" time="0.000">
+			<failure message="Failed" type="">    main_test.go:16: Sum does not equal 9</failure>
+		</testcase>
+	</testsuite>
+</testsuites>

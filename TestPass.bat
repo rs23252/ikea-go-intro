@@ -1,0 +1,1 @@
+go test -v -run TestPass 2>&1 | go-junit-report > testpass.xml

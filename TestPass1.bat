@@ -1,0 +1,1 @@
+go test -v -run TestPass 2>&1 | go-junit-report > C:\Users\robx\go\MergeSort\ikea-go-intro\test1\testpass.xml

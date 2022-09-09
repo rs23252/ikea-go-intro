@@ -1,0 +1,1 @@
+go test -v -run TestFail 2>&1 | go-junit-report > testfail.xml
