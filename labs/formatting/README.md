@@ -2,6 +2,8 @@
 
 Go provides excellent support for formatting using the `fmt.Printf` function. 
 
+[fmt Documentation](https://pkg.go.dev/fmt)
+
 📋 Here are some examples of common string formatting tasks:
 
 ```go

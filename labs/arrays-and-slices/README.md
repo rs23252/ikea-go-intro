@@ -35,9 +35,6 @@ In this example,
 
 Slices are very important in Go programs
 
-Note: A slice is not an array. Go also supports arrays, but you'll see later than they aren't
-very common, or very easy to use, so we won't discuss them at the moment.
-
 ## How large is a slice?
 
 If I declare a slice, `[]string`, how many items can it hold?
@@ -73,7 +70,8 @@ func main() {
 
 In this example, on the first line `var cities []string` declares cities to be a slice of string. On the second line, cities is assigned the result of `make([]string, 20)`.
 
-Lab:
+## Lab:
+
 Let's do a quick exercise to familarise yourself with using slices
 
 ```go
@@ -152,7 +150,7 @@ func main() {
 ```
 
 ## Slice initialisation
-We want to create an []int slice of the first 10 prime numbers, how could we do this?
+We want to create an `[]int` slice of the first 10 prime numbers, how could we do this?
 
 One solution could be to create the slice and assign a value to each element in the slice.
 
@@ -259,7 +257,7 @@ func main() {
 
 	// Write a program to print all the primes less than 10
 	// loop through the slice of primes and test if the value
-	// is less than 10. When you find a value that is 10 or more
+	// is less than 10. When you find a value that is 10 or more,
 	// slice the list of primes at that point and print it.
 
 	// Bonus: write a program to print only the two digit primes.
@@ -327,8 +325,17 @@ sumOfLetters("excellent") => 100
   <summary>Not sure how?</summary>
 
 ```go
+package main
+
+import "fmt"
 
 func main() {
+  // find the sum of "cba"
+  letters := "cba"
+  sumOfLetters(letters)
+}
+
+func sumOfLetters(letters string) {
   // create a slice to keep alphabets from a to z
   letterValue := make([]string, 0)
   letterValue = append(letterValue, "")
@@ -337,14 +344,11 @@ func main() {
     letterValue = append(letterValue, char)
   }
 
-  // find the sum of "cba"
-  letters := "cba"
-
   // iterating over letters and calling findValue to find the value of alphabet and doing sum
   sum := 0
   for _, char := range letters {
-   c := fmt.Sprintf("%c", char)
-   sum = sum + findValue(c, letterValue)
+    c := fmt.Sprintf("%c", char)
+    sum = sum + findValue(c, letterValue)
   }
   fmt.Println("sum is: ", sum)
 }
@@ -358,6 +362,7 @@ func findValue(char string, letterValue []string) int {
   }
   return 0
 }
+
 ```
 </details>
 <br>

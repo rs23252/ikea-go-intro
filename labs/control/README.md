@@ -82,6 +82,7 @@ switch i {
 you can also check conditions:
 
 ```go
+x := 5
 switch {
   case x < 10:
     f1() //calling function f1
@@ -89,6 +90,14 @@ switch {
     f2() //calling function f2
   default:
     println("default called")
+}
+
+func f1() {
+  fmt.Println("f1 called")
+}
+
+func f2() {
+  fmt.Println("f2 called")
 }
 ```
 
@@ -111,7 +120,14 @@ func main() {
 
 <br>
 
-**Lab:**
+## Lab 1:
+
+In the last unit test example you have seen the `addContact` function having a chaining of `if-else` for phone number. Convert the `if-else` chaining to `switch`
+
+[Unit test program](../unit-testing#write-unit-test)
+
+
+## Lab 2:
 
 1. Write a function called `hello` that receives a name and prints hello, <name>
 for e.g `Hello("Chris")` prints `Hello, Chris`
@@ -127,3 +143,5 @@ for e.g `Hello("Chris")` prints `Hello, Chris`
     - `Bonjour, Chris` when `Hello("Chris", "French")`.
     - rest of the requirement will remain same.
     - modify the program to use `switch` statement instead of using `if`.
+
+5. Write unit tests
