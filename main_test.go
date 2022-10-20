@@ -12,7 +12,7 @@ func TestPass(t *testing.T) {
 
 func TestFail(t *testing.T) {
 	what := sum(2, 5)
-	if what != 7 {
+	if what != 9 {
 		t.Errorf("Sum does not equal 9")
 	}
 

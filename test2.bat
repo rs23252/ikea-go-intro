@@ -1,0 +1,1 @@
+go test -v 2>&1 | go-junit-report > C:\Users\robx\go\MergeSort\ikea-go-intro\test2\testreport.xml
